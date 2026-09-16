@@ -419,17 +419,16 @@ export function CoverFlowCarousel({
             width: "46px",
             height: "46px",
             borderRadius: "50%",
-            backgroundColor: "rgba(13,45,74,0.45)",
-            border: "1px solid rgba(185,210,223,0.28)",
+            backgroundColor: "transparent",
+            border: "none",
             color: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backdropFilter: "blur(8px)",
             cursor: "pointer",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+            filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.65))",
             zIndex: 40,
-            transition: "all 200ms ease",
+            transition: "transform 200ms ease, opacity 200ms ease",
           }}
         >
           <ChevronLeftIcon />
@@ -446,17 +445,16 @@ export function CoverFlowCarousel({
             width: "46px",
             height: "46px",
             borderRadius: "50%",
-            backgroundColor: "rgba(13,45,74,0.45)",
-            border: "1px solid rgba(185,210,223,0.28)",
+            backgroundColor: "transparent",
+            border: "none",
             color: "#ffffff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backdropFilter: "blur(8px)",
             cursor: "pointer",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+            filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.65))",
             zIndex: 40,
-            transition: "all 200ms ease",
+            transition: "transform 200ms ease, opacity 200ms ease",
           }}
         >
           <ChevronRightIcon />
