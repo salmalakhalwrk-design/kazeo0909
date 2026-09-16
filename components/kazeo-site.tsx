@@ -102,6 +102,12 @@ const gmsItems = [
   { name: 'Carrefour · Signal 10X', img: '/gms/carrefour-10x-1.jpg' },
 ]
 
+const goodiesItems = [
+  { name: 'Mug thermos · Freedom 250', img: '/goodies/freedom250.jpg' },
+  { name: 'Mug thermos · Ambassade des États-Unis en Libye', img: '/goodies/ambassade-usa-libye.jpg' },
+  { name: 'Gourdes & thermos · Club Africain 1920', img: '/goodies/club-africain-1920.jpg' },
+]
+
 function Drop({ tone = 'cyan' }: { tone?: string }) {
   return <span aria-hidden="true" className={`ink-drop ink-${tone}`} />
 }
@@ -216,7 +222,7 @@ export function KazeoSite() {
 
     <section className="vitrines section-dark" id="vitrines"><div className="section-inner"><SectionLabel>HABILLAGE DE VITRINES</SectionLabel><div className="events-head"><h2>Du caractère<br /><em>à votre devanture.</em></h2><p>Adhésifs, dépolis et micro-perforés : une vitrine qui capte le regard sans jamais bloquer la lumière.</p></div><div className="event-grid"><Visual label="Vitrophanie & Stickers" tone="plain-a" large /><Visual label="Adhésif Dépoli" tone="plain-b" /><Visual label="Micro-perforé One-Way" tone="plain-c" /></div><GalleryLink slug="vitrines" tone="plain-b" label="Voir la galerie Vitrines" /></div></section>
 
-    <section className="goodies section-blue" id="goodies"><div className="section-inner intro-grid"><div><SectionLabel>NOUVEAUTÉ</SectionLabel><h2>Votre marque sur tous les objets,<br /><em>sans aucune limite.</em></h2><p className="lead">Découvrez notre toute dernière innovation : l’impression UV DTF. Ce procédé ultra-moderne permet d’appliquer votre logo sous forme de stickers avec un effet de relief, des couleurs éclatantes et une résistance à toute épreuve sur presque n’importe quelle surface — verre, métal, plastique, bois.</p><FeatureList items={['Mugs, gourdes et thermos', 'Agendas et stylos', 'Matériel électronique', 'Packaging sur-mesure', 'Une infinité de goodies personnalisés']} /></div><GalleryLink slug="goodies" tone="plain-c" label="Voir la galerie Goodies" shine /></div></section>
+    <section className="goodies section-blue" id="goodies"><div className="section-inner"><div className="intro-grid"><div><SectionLabel>NOUVEAUTÉ</SectionLabel><h2>Votre marque sur tous les objets,<br /><em>sans aucune limite.</em></h2><p className="lead">Découvrez notre toute dernière innovation : l’impression UV DTF. Ce procédé ultra-moderne permet d’appliquer votre logo sous forme de stickers avec un effet de relief, des couleurs éclatantes et une résistance à toute épreuve sur presque n’importe quelle surface — verre, métal, plastique, bois.</p><FeatureList items={['Mugs, gourdes et thermos', 'Agendas et stylos', 'Matériel électronique', 'Packaging sur-mesure', 'Une infinité de goodies personnalisés']} /></div><GalleryLink slug="goodies" tone="plain-c" label="Voir la galerie Goodies" shine /></div><div className="gms-realise"><p className="gms-realise-label">Quelques réalisations : mugs thermos & gourdes personnalisées</p><div className="signage-grid">{goodiesItems.map((item, i) => <div className="signage-tile" key={item.name + i}><img src={item.img} alt={item.name} loading="lazy" /><span>{item.name}</span></div>)}</div></div></div></section>
 
     <section className="success section-dark" id="succes"><div className="section-inner"><SectionLabel>NOS RÉUSSITES</SectionLabel><div className="services-head"><h2>La preuve<br /><em>par l’exécution.</em></h2><p>Au-delà des belles photos, la vraie question est : pouvons-nous résoudre votre problème de déploiement ? Quelques exemples de missions que nous savons gérer.</p></div><div className="service-grid service-grid-2">
       <article className="service-card"><Visual label="Vitrophanie Multi-Sites" tone="cyan" /><div className="service-info"><span className="service-index">01</span><h3>Déploiement Vitrophanie Multi-Sites</h3><p>Une campagne de vitrophanie déployée sur plusieurs dizaines de pharmacies à travers le pays, dans des délais courts et avec une qualité homogène sur chaque point de vente.</p></div></article>
