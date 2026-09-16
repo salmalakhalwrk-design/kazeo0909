@@ -53,6 +53,11 @@ const clientLogos = [
   { name: 'Unilever', img: '/logos/unilever.png' },
   { name: 'Intérieurs Mobilier de Bureaux', img: '/logos/interieurs.png' },
   { name: 'Société des Stations Thermales', img: '/logos/thermales.png' },
+  { name: 'Carrefour', img: '/logos/carrefour.png' },
+  { name: 'Office de l’Aviation Civile et des Aéroports', img: '/logos/oaca.png' },
+  { name: 'Moulin d’Or', img: '/logos/moulindor.png' },
+  { name: 'Délice Holding', img: '/logos/delice.png' },
+  { name: 'Ambassade de Suisse en Tunisie', img: '/logos/ambassade-suisse.png' },
 ]
 
 const savoirFaireItems: CarouselItem[] = [
