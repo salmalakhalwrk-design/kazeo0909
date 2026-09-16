@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowUpRight } from 'lucide-react'
+import { gmsItems, goodiesItems, type Realisation } from '@/lib/realisations'
 
-const galleries: Record<string, { title: string; tag: string; tone: string; intro: string; items: string[] }> = {
+const galleries: Record<string, { title: string; tag: string; tone: string; intro: string; items: string[]; photos?: Realisation[] }> = {
   numerique: {
     title: 'Impression Numérique',
     tag: 'IMPRESSION NUMÉRIQUE',
@@ -23,6 +24,7 @@ const galleries: Record<string, { title: string; tag: string; tone: string; intr
     tone: 'yellow',
     intro: 'Faire de vos produits la star du rayon : des décors et présentoirs pensés pour attirer l’œil et déclencher le coup de cœur.',
     items: ['Habillage de vitrines', 'Têtes de gondole & caches-palettes', 'Stop-rayons & réglettes PVC', 'Factices géants', 'Stands de dégustation'],
+    photos: gmsItems,
   },
   vehicules: {
     title: 'Habillage Véhicules',
@@ -51,6 +53,7 @@ const galleries: Record<string, { title: string; tag: string; tone: string; intr
     tone: 'plain-c',
     intro: 'Votre marque sur tous les objets, sans aucune limite : impression UV DTF haute résistance sur presque toutes les surfaces.',
     items: ['Mugs, gourdes & thermos', 'Agendas & stylos', 'Matériel électronique', 'Packaging sur-mesure'],
+    photos: goodiesItems,
   },
 }
 
@@ -76,13 +79,24 @@ export default async function GaleriePage({ params }: { params: Promise<{ slug: 
           <span className="visual-code">KAZÉO / GALERIE</span>
         </div>
 
-        <div className="gallery-grid">
-          {gallery.items.map((item, i) => (
-            <div key={item} className={`gallery-tile visual-${['cyan', 'orange', 'yellow', 'magenta', 'plain-a', 'plain-b', 'plain-c'][i % 7]}`}>
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
+        {gallery.photos && gallery.photos.length > 0 ? (
+          <div className="signage-grid" style={{ marginTop: 40 }}>
+            {gallery.photos.map((item, i) => (
+              <div className="signage-tile" key={item.name + i}>
+                <img src={item.img} alt={item.name} loading="lazy" />
+                <span>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="gallery-grid">
+            {gallery.items.map((item, i) => (
+              <div key={item} className={`gallery-tile visual-${['cyan', 'orange', 'yellow', 'magenta', 'plain-a', 'plain-b', 'plain-c'][i % 7]}`}>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         <a href="/#contact" className="button button-orange" style={{ marginTop: 50, display: 'inline-flex' }}>
           Demander un devis <ArrowUpRight aria-hidden="true" />

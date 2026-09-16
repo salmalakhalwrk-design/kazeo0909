@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowDownRight, ArrowUpRight, Award, Check, ChevronDown, Lightbulb, Menu, MoveRight, Users, X, Zap } from 'lucide-react'
 import { CoverFlowCarousel, type CarouselItem } from '@/components/ui/3-d-coverflow-carousel'
 import NeuralBackground from '@/components/ui/flow-field-background'
+import { signageItems, gmsItems, goodiesItems } from '@/lib/realisations'
 
 const process = [
   ['01', 'Rencontre', 'Prise de contact en moins de 48h.'],
@@ -65,47 +66,6 @@ const savoirFaireItems: CarouselItem[] = [
   { tag: '#02 · Signalétique', titleLine1: 'Signalétique', titleLine2: 'Orientation claire', desc: 'Lettres reliefs et logos d’accueil qui installent votre identité dans vos locaux.', img: '/signage/vitae-1.jpg', ctaText: 'Découvrir', ctaUrl: '#signaletique' },
   { tag: '#03 · Impression', titleLine1: 'Grand format', titleLine2: 'Impact visuel', desc: 'Bâches, vinyles et supports rigides aux finitions nettes.', img: 'https://kazeo-solution-c0towct0r-fggtyuj.vercel.app/images/kazeo-print.png', ctaText: 'Découvrir', ctaUrl: '#contact' },
   { tag: '#04 · Événementiel', titleLine1: 'Stand & salon', titleLine2: 'Présence remarquée', desc: 'Des dispositifs sur-mesure pour salons, congrès et lancements.', img: 'https://kazeo-solution-c0towct0r-fggtyuj.vercel.app/images/kazeo-event.png', ctaText: 'Découvrir', ctaUrl: '#contact' },
-]
-
-const signageItems = [
-  { name: 'BTS Bank', img: '/signage/bts-bank.jpg' },
-  { name: 'Vitae Tunisie', img: '/signage/vitae-1.jpg' },
-  { name: 'Erasmus+ Tunisia', img: '/signage/erasmus.jpg' },
-  { name: 'IIFE', img: '/signage/iife.jpg' },
-  { name: 'FERASA Oil & Technical Services', img: '/signage/ferasa.jpg' },
-  { name: 'Edura — Centre de Soutien Scolaire', img: '/signage/edura.jpg' },
-  { name: 'Vitae Tunisie', img: '/signage/vitae-2.jpg' },
-  { name: 'Vitae Tunisie', img: '/signage/vitae-3.jpg' },
-  { name: 'Expensya', img: '/signage/expensya.jpg' },
-  { name: 'Centre de Radiologie Urbain Nord', img: '/signage/radiologie.jpg' },
-  { name: 'Heptacom', img: '/signage/heptacom.jpg' },
-  { name: 'Centre Acoustique Médical Tunis', img: '/signage/acoustique.jpg' },
-  { name: 'Lettrage sur vitrine', img: '/signage/vitrine-lettrage.jpg' },
-]
-
-const gmsItems = [
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-1.jpg' },
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-2.jpg' },
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-3.jpg' },
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-4.jpg' },
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-5.jpg' },
-  { name: 'Carrefour · Signal Système Blancheur', img: '/gms/carrefour-blancheur-6.jpg' },
-  { name: 'Carrefour · Signal White Now', img: '/gms/carrefour-whitenow-1.jpg' },
-  { name: 'Carrefour · Signal White Now', img: '/gms/carrefour-whitenow-2.jpg' },
-  { name: 'Carrefour · Signal White Now', img: '/gms/carrefour-whitenow-3.jpg' },
-  { name: 'Carrefour · Signal Kids', img: '/gms/carrefour-kids-1.jpg' },
-  { name: 'Carrefour · Signal Kids', img: '/gms/carrefour-kids-2.jpg' },
-  { name: 'Carrefour · Signal Kids', img: '/gms/carrefour-kids-3.jpg' },
-  { name: 'Carrefour · Signal Kids', img: '/gms/carrefour-kids-4.jpg' },
-  { name: 'Carrefour · Signal Charbon', img: '/gms/carrefour-charbon.jpg' },
-  { name: 'Carrefour · Signal Cavity Fighter 10X', img: '/gms/carrefour-cavityfighter.jpg' },
-  { name: 'Carrefour · Signal 10X', img: '/gms/carrefour-10x-1.jpg' },
-]
-
-const goodiesItems = [
-  { name: 'Mug thermos · Freedom 250', img: '/goodies/freedom250.jpg' },
-  { name: 'Mug thermos · Ambassade des États-Unis en Libye', img: '/goodies/ambassade-usa-libye.jpg' },
-  { name: 'Gourdes & thermos · Club Africain 1920', img: '/goodies/club-africain-1920.jpg' },
 ]
 
 function Drop({ tone = 'cyan' }: { tone?: string }) {
